@@ -1,0 +1,21 @@
+extends layout
+
+block content
+	div.container
+		div.row
+			div.col-sm-6.col-md-4.col-md-offset-4
+				h1.text-center.login-title Registration Details
+					div.signup-wall
+						form(class='form-signin', action='/epifinder/signup', method='POST')
+							input(type='text', name='full_name', class='form-control', placeholder='Full Name',required,autofocus)
+							input(type='text', name='phone_number', class='form-control', placeholder='Phone Number',required )
+							input(type='email', name='username', class='form-control', placeholder='Email',required )
+							input(type='text', name='department', class='form-control', placeholder='Department',required)
+							input(type='text', name='designation', class='form-control', placeholder='Designation',required)
+							input(type='text', name='healthcare_license', class='form-control', placeholder='Healthcare License',required)
+							input(type='password', name='password', class='form-control nomargin', placeholder='Password', required)
+							button(class='btn btn-lg btn-primary btn-block', type='submit') Register
+							span.clearfix
+					#message
+						if message
+							h1.text-center.error-message #{message}

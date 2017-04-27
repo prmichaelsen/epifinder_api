@@ -1,0 +1,29 @@
+extends layout
+
+block content
+	div.container
+		div.row
+			div.col-sm-12.col-md-12.col-md-offset-2
+				#user
+					h1.text-left.login-title Welcome #{user.firstName}. Check your details below:
+						div.signup-wall
+							.user-details
+							div 
+								strong Full Name 
+								|#{user.full_name} 
+							div 
+								strong Phone Number 
+								|#{user.phone_number} 
+							div 
+								strong Email    
+								|#{user.email}
+							div 
+								strong Department 
+								|#{user.department} 
+							div 
+								strong Designation 
+								|#{user.designation} 
+							div 
+								strong Healthcare License 
+								|#{user.healthcare_license} 
+						a(href='/epifinder/signout', class='text-center new-account') Sign Out
